@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Giordana Dev</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fonte e cores gerais */
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #0a090d; /* fundo quase preto */
+      color: #b3aaaf;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Links padrão e botões transparentes */
+    a {
+      color: #b3aaaf;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    a:hover,
+    a:focus {
+      color: #8822ff;
+    }
+
+    button {
+      font-family: inherit;
+      background: transparent;
+      border: 1px solid #b3aaaf;
+      color: #b3aaaf;
+      padding: 0.5em 1.2em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+    }
+
+    button:hover,
+    button:focus {
+      background: #8822ff;
+      border-color: #682bcc;
+      color: white;
+    }
+
+    /* Container geral */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* ========================
+       NAVBAR
+    ======================== */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background-color: #0d0c0fcc; /* leve transparência */
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 8px;
+      color: #666;
+      user-select: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #b3aaaf;
+    }
+
+    nav ul li a {
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #8822ff;
+    }
+
+    nav .btn-contact {
+      font-weight: 700;
+      background: transparent;
+      border: 1px solid #b3aaaf;
+      border-radius: 8px;
+      padding: 6px 16px;
+      color: #b3aaaf;
+      letter-spacing: 0.07em;
+      box-shadow: none;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    nav .btn-contact:hover,
+    nav .btn-contact:focus {
+      background-color: #8822ff;
+      border-color: #682bcc;
+      color: white;
+    }
+
+    /* ========================
+       HEADER (Primeira tela)
+    ======================== */
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 20% 25%, #3c0ab9aa, #0d0b0e 120%);
+    }
+
+    header .descricao {
+      max-width: 500px;
+      color: #b3aaaf;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.rem;
+      color: #8822ff;
+      font-family: monospace;
+    }
+
+
+
+    header {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente o conteúdo */
+  align-items: center; /* centraliza verticalmente (se o header tiver altura) */
+  gap: 40px; /* espaço entre os dois blocos - ajuste conforme preferência */
+  height: 100vh; /* altura total da tela (opcional, para centralizar verticalmente no viewport) */
+  padding: 0 20px; /* espaçamento lateral para não encostar nas bordas */
+  box-sizing: border-box; /* para evitar overflow de padding */
+}
+/* Opcional: controle a largura de cada bloco */
+header > div {
+  max-width: 500px; /* ajuste conforme necessário */
+  flex: 1 1 auto; /* para que os blocos cresçam e encolham proporcionalmente */
+}
+
+
+    
+
+
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #bababa;
+      font-family: 'Courier New', Courier, monospace;
+      max-width: 600px;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      max-width: 600px;
+      font-size: 1rem;
+      color: #b3aaaf;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn-projetos {
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: transparent;
+      border: none;
+      color: #fff;
+      letter-spacing: 0.07em;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .btn-projetos:hover,
+    .btn-projetos:focus {
+      color: #8822ff;
+    }
+
+    .btn-projetos svg {
+      margin-left: 6px;
+      stroke: #fff;
+      transition: stroke 0.3s;
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-projetos:hover svg,
+    .btn-projetos:focus svg {
+      stroke: #8822ff;
+    }
+
+    header button.btn-contact {
+      padding: 0.5rem 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+    }
+
+    /* Conectar-se */
+    .conectar-se {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.09em;
+      margin-top: -10px;
+    }
+
+    .conectar-se span {
+      color: #ae00ff;
+      user-select: none;
+    }
+
+    .conectar-se a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      color: #000000;
+      background: #29292922;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .conectar-se a:hover,
+    .conectar-se a:focus {
+      background: #000000;
+      color: white;
+    }
+
+    /* Bolinhas decorativas na direita */
+    .header-graphics {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-graphics .circle-big {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      background: #222426;
+      border-radius: 50%;
+      box-shadow: inset 0 0 60px #222426;
+      top: 70px;
+      right: 50px;
+    }
+
+    .header-graphics .square-center {
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      background: linear-gradient(135deg, #3c3f40, #232425);
+      top: 165px;
+      right: 155px;
+      filter: brightness(0.5);
+      border-radius: 4px;
+    }
+
+    .header-graphics .circle-small {
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #292929;
+      color: #b3aaaf;
+      font-family: monospace;
+      font-size: 0.8rem;
+      font-weight: 400;
+      border: 1px solid #666;
+      top: 260px;
+      right: 190px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      box-shadow: inset 0 0 8px #66666670;
+    }
+
+    /* Bolinha púrpura flutuante com texto "DEV" */
+
+    .purple-bubble {
+      position: absolute;
+      top: 100px;
+      right: 280px;
+      width: 45px;
+      height: 45px;
+      background: #7e15d7;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 700;
+      font-family: monospace;
+      box-shadow:
+        0 0 8px #7e15d7,
+        0 0 18px #9b2df2,
+        0 0 30px #a537f3;
+      cursor: default;
+      user-select: none;
+      z-index: 20;
+    }
+
+    /* ========================
+       SEÇÃO SOBRE
+    ======================== */
+
+    section#sobre {
+      display: flex;
+      gap: 5rem;
+      max-width: 1300px;
+      margin: 100px auto 80px auto;
+      padding: 2rem 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: #b3aaaf;
+      position: relative;
+    }
+
+    section#sobre .conteudo-texto {
+      flex: 1 1 600px;
+      max-width: 650px;
+    }
+
+    section#sobre h2 {
+      font-size: 1.85rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    section#sobre p {
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    section#sobre p strong,
+    section#sobre p b {
+      color: #8822ff;
+      font-weight: 700;
+    }
+
+    /* Cartão do lado direito */
+
+    section#sobre .card-emoji {
+      background: #1c1a1f;
+      border-radius: 12px;
+      padding: 13rem;
+      color: #b3aaaf;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 20px transparent;
+      position: relative;
+      user-select: none;
+      transition: box-shadow 0.3s ease;
+      font-family: monospace;
+      min-height: 200px;
+    }
+
+    
+
+    /* ========================
+       CARDS & DADOS SOBRE
+    ======================== */
+
+        .stats-cards {
+      margin-top: 50px;
+      display: flex;
+      gap: 1.5rem;
+      /* flex-wrap: wrap; Remover ou comentar para alinhar numa linha só */
+      flex-wrap: nowrap;
+      /* Ajustar o max-width para garantir espaço */
+      max-width: 100%;
+    }
+
+    .stat-card {
+      background: #222;
+      border-radius: 8px;
+      padding: 14px 24px;
+      width: 280px; /* largura fixa mantém o alinhamento estático */
+      text-align: center;
+      border: 1px solid #4422ff11;
+      font-family: monospace;
+      color: #9e9ca0;
+      cursor: default;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    /* ========================
+       HABILIDADES
+    ======================== */
+
+    #habilidades {
+      max-width: 1200px;
+      margin: 80px auto 120px auto;
+      padding: 0 3rem;
+      color: #9b03f3;
+      text-align: center;
+    }
+
+    
+
+
+    /* Estilização do h2 dentro de #habilidades */
+    #habilidades h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: rgb(129, 1, 250);
+      font-family: 'Arial', sans-serif; /* Mude aqui para a fonte desejada */
+    }
+
+    #habilidades p.intro {
+      max-width: 720px;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      font-family: monospace;
+      letter-spacing: 0.07em;
+      color: #999;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Cards de habilidades */
+
+    .skills-cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    .skill-card {
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #2d0a86a2 inset;
+      padding: 2.2rem 2.5rem 2rem 2.5rem;
+      width: 280px;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      color: #b3aaaf;
+      border: 1px solid transparent;
+      position: relative;
+      cursor: default;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 0 15px #8822ff, 0 0 26px #aa5eff;
+      border-color: #8822ff;
+    }
+
+    .skill-card .icon {
+      font-size: 1.8rem;
+      color: #8822ff;
+      margin-bottom: 1.3rem;
+      user-select: none;
+    }
+
+    .skill-card .tag {
+      font-size: 0.7rem;
+      background: #290664cc;
+      color: #b37eee;
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      user-select: none;
+      font-weight: 600;
+      font-family: monospace;
+    }
+
+    .skill-card h3 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      color: white;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: #9e9ca0;
+      line-height: 1.3;
+      flex-grow: 1;
+      letter-spacing: 0.03em;
+    }
+
+    .skill-card button {
+      background: #3f2e7e;
+      border: none;
+      color: white;
+      align-self: flex-start;
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      transition: background-color 0.3s ease;
+    }
+
+    .skill-card button:hover {
+      background-color: #682bcc;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ========================
+       SEÇÃO EXPERIÊNCIA
+    ======================== */
+
+    #experiencia {
+      max-width: 700px;
+      margin: 200px auto 80px auto;
+      padding: 0 5rem;
+      color: #b3aaaf;
+      background: #1b181e;
+      border-radius: 8px;
+      font-family: monospace;
+      box-shadow: 0 0 20px #8822ff33 inset;
+      
+    }
+
+    #experiencia p.intro {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* Linha do tempo vertical */
+
+    .timeline {
+      position: relative;
+      padding-left: 3.6rem;
+      border-left: 3px solid #8822ff77;
+      margin-bottom: 3rem;
+      padding-bottom: 50px;
+    }
+
+    .event {
+      position: relative;
+      margin-bottom: 1.8rem;
+      padding-left: 1rem;
+    }
+
+    .event::before {
+      content: attr(data-year);
+      position: absolute;
+      left: -2.5rem;
+      top: 10%;
+      transform: translateY(-50%);
+      background: #1d1c20;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: #b3aaaf;
+      line-height: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 0 12px #8822ffaa;
+      user-select: none;
+      font-family: monospace;
+      
+    }
+
+    .event h3 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 1px;
+      font-weight: 700;
+    }
+
+    .event p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #b3aaaf;
+      padding-bottom: 50px;
+    }
+
+    /* ========================
+       PROJETOS
+    ======================== */
+
+    #projetos {
+      max-width: 1500px;
+      margin: 80px auto 80px auto;
+      padding: 0 3rem;
+      color: #b3aaaf;
+      text-align: center;
+      font-family: monospace;
+      padding-bottom: 50px;
+    }
+
+    #projetos h2 {
+      font-weight: 700;
+      color: #8822ff;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    #projetos .projects-title {
+      font-weight: 700;
+      font-size: 1.9rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      user-select: none;
+    }
+
+    #projetos p.description {
+      color: #b3aaaf;
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Cards de projeto (grid) */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .project-card {
+      background: #222;
+      border-radius: 12px;
+      padding: 20px;
+      color: #b3aaaf;
+      border: 1px solid #290664cc;
+      position: relative;
+      box-shadow: inset 0 0 10px #8822ff44;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .project-card:hover {
+      border-color: #8822ff;
+      box-shadow: 0 0 15px #8822ff99, 0 0 32px #a537f3b7;
+    }
+
+    .project-card .top {
+      display: flex;
+      justify-content:flex-end;
+      margin-bottom: 1rem;
+      gap: 0.5rem;
+    }
+
+    .project-badge {
+      background: #290664cc;
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      user-select: none;
+      color: #b37eee;
+      font-weight: 600;
+      font-family: monospace;
+    }
+
+    .project-badge.webapp {
+      background: #1c1b3ebb;
+      color: #72aaff;
+    }
+
+    .project-badge.desktop {
+      background: #5e2394bb;
+      color: #cf67ff;
+    }
+
+    .project-badge.website {
+      background: #290664cc;
+      color: #b37eee;
+    }
+
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+      color: #9e9ca0;
+      flex-grow: 1;
+      margin-bottom: 15px;
+      letter-spacing: 0.03em;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-start;
+      margin-bottom: 12px;
+      user-select: none;
+    }
+
+    .project-tag {
+      background: #1c1a1a;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 0.7rem;
+      font-family: monospace;
+      color: #555555aa;
+      border: 1px solid #4444aa44;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .project-tag:hover {
+      background-color: #8822ffcc;
+      color: white;
+    }
+
+    /* Botão code */
+    .btn-code {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #b3aaaf;
+      background: transparent;
+      border: 1px solid #b3aaaf;
+      border-radius: 6px;
+      padding: 6px 14px;
+      text-decoration: none;
+      user-select: none;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      justify-content: center;
+    }
+
+    .btn-code:hover,
+    .btn-code:focus {
+      background-color: #8822ff;
+      border-color: #682bcc;
+      color: white;
+    }
+
+    .btn-code svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+
+    /* ========================
+       HABILIDADES DETALHADAS (Barras)
+    ======================== */
+
+    #skills-details {
+      max-width: 900px;
+      margin: 0 auto 100px auto;
+      padding: 0 3rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      color: #b3aaaf;
+      font-family: monospace;
+      user-select: none;
+      flex-wrap: wrap;
+    }
+
+    .skill-list {
+      background: #131214;
+      padding: 2rem;
+      border-radius: 14px;
+      width: 280px;
+      box-shadow: 0 0 30px #1b1861 inset;
+    }
+
+    .skill-list h3 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      user-select: text;
+    }
+
+    .skill-item {
+      margin-bottom: 20px;
+      user-select: none;
+    }
+
+    .skill-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-name {
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      user-select: text;
+    }
+
+    .bar-container {
+      width: 100%;
+      height: 6px;
+      background: #272727;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 6px;
+      background: #333;
+      width: 0;
+      border-radius: 4px;
+      transition: width 1.5s ease;
+    }
+
+    /* Cores diferentes para cada coluna */
+    .frontend .bar-fill {
+      background: linear-gradient(90deg, #8c2aff, #4421eb);
+    }
+
+    .backend .bar-fill {
+      background: linear-gradient(90deg, #aa18ff, #5a0fbb);
+    }
+
+    .tools .bar-fill {
+      background: linear-gradient(90deg, #9b36ff, #4e1cc5);
+    }
+
+    /* Percentagem na direita */
+    .skill-percent {
+      font-size: 0.8rem;
+      color: #444;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      float: right;
+      margin-left: 10px;
+      user-select: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills-section {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    background-color: rgba(130, 80, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(130, 80, 255, 0.6);
+    border-color: #8250ff;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #b57aff;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
+
+
+
+
+/* Estilizando a seção de contato */
+#contato {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal */
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Boxes individuais */
+.contato-box {
+  background: #2c2c2c;
+  padding: 30px 20px;
+  border-radius: 15px;
+  flex: 1 1 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Efeito hover nos boxes */
+.contato-box:hover {
+  transform: translateY(-5px);
+  background: #3a3a3a;
+}
+
+/* Títulos */
+.contato-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff79c6; /* Rosa neon */
+}
+
+/* Parágrafos */
+.contato-box p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Texto das redes sociais */
+.redes-texto {
+  margin-bottom: 10px;
+}
+
+/* Ícones das redes sociais */
+.redes-sociais a {
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+/* Efeito hover nos ícones */
+.redes-sociais a:hover {
+  transform: scale(1.2);
+  color: #ff79c6; /* Rosa neon */
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contato-box {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.emoji-img {
+  width: 400px;   /* Ajuste o tamanho conforme desejar */
+  height: 400px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    /* ===== Services Cards Grid ===== */
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ===== Card Base ===== */
+.cards-grid .card {
+  background-color: #121217; /* preto elegante */
+  border: 2px solid #b966ff; /* borda roxa */
+  border-radius: 0.75rem;
+  padding: 1.0rem 1.3rem;
+  color: #beb6ba;
+  width: 280px;
+  box-shadow: 0 0 10px #6200ea55;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== Middle Card (Full Stack) ===== */
+.cards-grid .card:nth-child(2) {
+  width: 320px; /* maior */
+  transform: translateY(-10px); /* destaca */
+  box-shadow: 0 0 26px 9px #bb7affcc;
+  border-color: #bb7affcc;
+}
+
+/* ===== Card Hover ===== */
+.cards-grid .card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 30px 10px #bb7affdd;
+  border-color: #cc97ff;
+}
+
+
+
+/* ===== Card Title ===== */
+.card h3 {
+  margin-top: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b966ff;
+}
+
+/* Card description */
+.card p {
+  font-size: 0.875rem;
+  color: #d0cbd1;
+  margin: 0.5rem 0 0.8rem 0;
+  line-height: 1.4;
+}
+
+/* Card List Items */
+.card ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  color: #b966ff;
+  font-size: 0.75rem;
+  font-family: 'Roboto Mono', monospace;
+  list-style-type: disc;
+}
+
+/* Card Button */
+.card button {
+  background-color: transparent;
+  border: 1px solid #b966ff;
+  color: #b966ff;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card button:hover {
+  background-color: #b966ff;
+  color: #1a0a5b;
+  border-color: #b966ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .header-graphics {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .circle-big {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #222;
+      border: 2px solid #8a2be2;
+      box-shadow:
+        0 0 20px rgba(138, 43, 226, 0.8),
+        0 0 40px rgba(138, 43, 226, 0.5),
+        0 0 60px rgba(138, 43, 226, 0.3);
+      animation: float 3s ease-in-out infinite;
+
+      /* Flexbox para centralizar texto */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+      user-select: none;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Estilos opcionais para os outros elementos */
+    .circle-small {
+      background-color: #ff69b4;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .purple-bubble {
+      background-color: #8a2be2;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      user-select: none;
+    }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards-grid .card:nth-child(2) {
+    width: 100%;
+    transform: translateY(0);
+    box-shadow: 0 0 20px 5px #bb7affcc;
+  }
+
+
+.typing-text {
+  border-right: 2px solid #a020f0; /* cursor roxo neon */
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace, monospace;
+  font-size: 1.2rem;
+  color: #d0a0ff;
+}
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* remove a barra horizontal */
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%; /* evita que qualquer elemento ultrapasse a tela */
+}
+
+/* Ajustes extras para grids e containers */
+section,
+.container,
+.projects-grid,
+.cards-grid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* ========================
+   RESPONSIVIDADE
+======================== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 18px 20px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  header .header-graphics {
+    width: 300px;
+    height: 300px;
+  }
+
+  section#sobre {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stats-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #habilidades {
+    padding: 0 1.5rem;
+  }
+
+  #experiencia {
+    margin: 120px auto 60px auto;
+    padding: 0 2rem;
+  }
+
+  #projetos {
+    padding: 0 1.5rem;
+  }
+
+  #skills-details {
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .cards-grid {
+    justify-content: center;
+  }
+
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Esconde menu normal */
+  }
+
+  nav .btn-contact {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .header-graphics {
+    display: none; /* remove os gráficos pesados no mobile */
+  }
+
+  section#sobre .card-emoji {
+    width: 90%;
+    padding: 4rem 2rem;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #experiencia {
+    padding: 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .event::before {
+    left: -2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 0.7rem;
+    line-height: 40px;
+  }
+
+  #projetos .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #skills-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-list {
+    width: 90%;
+  }
+
+  .cards-grid .card {
+    width: 90%;
+  }
+
+  #contato {
+    padding: 40px 15px;
+  }
+
+  .contato-box {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+           
+    
+
+    /* ========================
+       ÍCONES USADOS (usando emojis para simplicidade)
+    ======================== */
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Giordana</div>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div>
+      <p class="descricao">OLÁ, EU SOU</p>
+      <h1>Giordana Stumm</h1>
+      <h1><strong>Desenvolvedora Full Stack</strong></h1>
+      <p>
+        Criando experiências digitais modernas e funcionais com código limpo e design pensado no usuário. Especializada em desenvolvimento e manutenção de hardware.
+      </p>
+
+      <div class="header-buttons">
+        
+        
+        
+      </div>
+
+      <div class="conectar-se" aria-label="Redes sociais">
+        <span>Conecte-se:</span>
+       <a href="https://github.com/gio0000" target="_blank" rel="noopener" aria-label="GitHub" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>GitHub</title><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.1.823 2.22v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/giordana-stumm-13786133a" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288zM5.337 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+
+        <a href="https://wa.me/5554999527071" target="_blank" rel="noopener" aria-label="WhatsApp" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>WhatsApp</title><path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.373 0 0 5.373 0 12a11.94 11.94 0 0 0 3.48 8.52l-1.5 5.52 5.52-1.5A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12a11.94 11.94 0 0 0-3.48-8.52zm-8.52 17.04a8.52 8.52 0 0 1-4.56-1.26l-.33-.2-3.3.9.9-3.3-.21-.33a8.52 8.52 0 1 1 7.5 3.93zm4.5-6.3c-.24-.12-1.44-.72-1.68-.8-.24-.08-.42-.12-.6.12s-.69.8-.84.96c-.15.16-.3.18-.54.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.35-1.68-.15-.24 0-.36.12-.48.12-.12.24-.3.36-.45.12-.15.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.6-1.44-.82-1.98-.22-.52-.44-.45-.6-.46-.15-.01-.33-.01-.51-.01-.18 0-.48.06-.72.3s-.96.94-.96 2.28.98 2.64 1.12 2.82c.14.18 1.94 2.96 4.7 4.14.66.28 1.18.44 1.58.56.66.18 1.26.15 1.74.09.53-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.24-.16-.48-.28z"/></svg>
+        </a>
+
+        <a href="https://www.instagram.com/gio__tech" target="_blank" rel="noopener" aria-label="Instagram" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>Instagram</title><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4.25 1.5a5.75 5.75 0 1 1 0 11.5 5.75 5.75 0 0 1 0-11.5zm0 1.5a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5z"/></svg>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="header-graphics" aria-hidden="true">
+      <div class="header-graphics" aria-hidden="true">
+      <div class="circle-big">Bem-vindo!</div>
+      <div class="circle-small">gio</div>
+      <div class="purple-bubble">DEV</div>
+    </div>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="sobre" aria-labelledby="title-sobre">
+    <div class="conteudo-texto">
+      <h2 id="title-sobre">Desenvolvedora Full Stack & Técnica em Informática</h2>
+      <p>Olá! Sou <strong>Giordana Stumm</strong>, uma desenvolvedora apaixonada por tecnologia e inovação. Minha jornada começou bem cedo,  aos 10 anos, quando realizei dois cursos de Informática básica e obtive meus primeiros passos e conhecimentos.</p>
+      <p>Desde então, eu me apaixonei mais ainda pela area e continuo estudando, atualmente tenho 17 anos. Tenho experiência sólida em <strong>desenvolvimento de interfaces modernas</strong> com HTML, CSS, JavaScript e Qt Designer, além de trabalhar no backend com <strong>Python, Java e MySQL</strong>.</p>
+      <p>Minha formação técnica também inclui <strong>manutenção de hardware</strong> e <strong>redes</strong>, o que me permite oferecer soluções completas, desde a concepção do software até a infraestrutura física necessária.</p>
+      <p>Acredito que a tecnologia deve ser acessível e funcional, sempre priorizando a <strong>experiência do usuário</strong> e a <strong>qualidade do código</strong>.</p>
+
+      <div class="stats-cards">
+        <div class="stat-card">
+          <span class="number">+3</span>
+          <span class="description">Anos Desenvolvendo</span>
+        </div>
+        <div class="stat-card">
+          <span class="number">+4</span>
+          <span class="description">Projetos Concluídos</span>
+        </div>
+      </div>
+    </div>
+
+    
+  <!-- Div com imagem no lugar do emoji -->
+  <div class="emoji">
+    <img src="eu.webp" alt="Ícone Desenvolvedora" class="emoji-img">
+  </div>
+
+  
+</div>
+
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" aria-labelledby="title-habilidades">
+    <h2 id="title-habilidades">Skills</h2>
+
+    <div id="skills-details">
+      <div class="skill-list frontend" aria-label="Frontend">
+        <h3>Frontend</h3>
+        <div class="skill-item" aria-label="HTML5 90%">
+          <div class="skill-name">HTML5 <span class="skill-percent"></span></div>
+          <div class="bar-container"><div class="bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item" aria-label="CSS3 85%">
+          <div class="skill-name">CSS3 <span class="skill-percent"></span></div>
+          <div class="bar-container"><div class="bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item" aria-label="JavaScript 80%">   
+          <div class="skill-name">JavaScript <span class="skill-percent"></span></div>
+          <div class="bar-container"><div class="bar-fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-list backend" aria-label="Backend">
+        <h3>Backend</h3>
+        <div class="skill-item" aria-label="Python 90%"><div class="skill-name">Python <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:90%"></div></div></div>
+        <div class="skill-item" aria-label="Java 85%"><div class="skill-name">Java <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:85%"></div></div></div>
+        <div class="skill-item" aria-label="MySQL 80%"><div class="skill-name">MySQL <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-item" aria-label="Flask 75%"><div class="skill-name">Flask <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:75%"></div></div></div>
+        <div class="skill-item" aria-label="POO 85%"><div class="skill-name">POO <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:85%"></div></div></div>
+      </div>
+
+      <div class="skill-list tools" aria-label="Ferramentas & Outras">
+        <h3>Ferramentas & Outras</h3>
+        <div class="skill-item" aria-label="Git/GitHub 85%"><div class="skill-name">Git/GitHub <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:85%"></div></div></div>
+        <div class="skill-item" aria-label="Qt Designer 80%"><div class="skill-name">Qt Designer <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-item" aria-label="Hardware 90%"><div class="skill-name">Hardware <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:90%"></div></div></div>
+        <div class="skill-item" aria-label="SQL 80%"><div class="skill-name">SQL <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:80%"></div></div></div>
+        <div class="skill-item" aria-label="Excel 75%"><div class="skill-name">PL <span class="skill-percent"></span></div><div class="bar-container"><div class="bar-fill" style="width:75%"></div></div></div>
+      </div>
+    </div>
+
+
+    <section class="skills-section">
+        <div class="container">
+            <div class="card">
+                <i class="fa-solid fa-code icon"></i>
+                <h3>Full Stack Dev</h3>
+                <p>Especialista no desenvolvimento de aplicações web e sistemas.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip icon"></i>
+                <h3>Hardware </h3>
+                <p>Conhecimento em componentes e sistemas de hardware complexos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-globe icon"></i>
+                <h3>Web Tecnologias</h3>
+                <p>Atualizado com as mais recentes tecnologias web e protocolos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-award icon"></i>
+                <h3>Certificação Inglês</h3>
+                <p>Idioma CEFR B1</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- =====================
+       TIMELINE / EXPERIÊNCIA
+  ======================= -->
+
+  <section id="experiencia" aria-labelledby="title-experiencia">
+    <p class="intro" id="title-experiencia">Uma evolução constante na busca por conhecimento e excelência técnica</p>
+
+    <div class="timeline">
+      <div class="event" data-year="2018">
+
+        <h3>Informática Básica</h3>
+        <p>Comecei no mundo da TI com apenas 10 anos, realizei dois cursos de Informática básica para ter uma base bem consolidada.</p>
+      </div>
+
+      <div class="event" data-year="2020">
+        <h3>Início na Programação</h3>
+        <p>Primeiros passos com HTML, CSS e JavaScript, onde escrevi meu primeiro código.</p>
+      </div>
+
+      <div class="event" data-year="2023">
+        <h3>Desenvolvimento Web</h3>
+        <p>Aprofundamento em HTML, CSS, JavaScript e primeiros projetos web e plataformas, Aprendizado de Python.</p>
+      </div>
+
+      <div class="event" data-year="2025">
+        <h3>Especialização Full Stack</h3>
+        <p>Domínio de mais tecnologias e Java,início dos projetos profissionais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       PROJETOS
+  ======================= -->
+
+  <section id="projetos" aria-labelledby="title-projetos">
+    <h2 id="title-projetos">MEU TRABALHO</h2>
+    <p class="description">
+      Uma seleção dos meus projetos mais significativos.
+    </p>
+
+    <div class="projects-grid">
+  <div class="project-card desktop">
+    <div class="project-badge desktop">Desktop App</div>
+    <div class="project-icon">🎸</div>
+    <div class="project-title">Simulação de Pedais para Guitarra</div>
+    <div class="project-description">Simulação avançada de pedais para guitarra desenvolvida com Python e Qt Designer. Interface intuitiva com efeitos em tempo real.</div>
+    <div class="project-tags">
+      <span class="project-tag">Python</span>
+      <span class="project-tag">Qt Designer</span>
+      <span class="project-tag">Audio Processing</span>
+    </div>
+    <a href="https://github.com/gio0000/Pedaleira-para-guitarra" target="_blank" class="btn-code" aria-label="Código do projeto Simulação de Pedais para Guitarra">
+      Ver no GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="project-card webapp">
+    <div class="project-badge webapp">Site</div>
+    <div class="project-icon">🛒</div>
+    <div class="project-title">E-commerce de Guitarras</div>
+    <div class="project-description">Plataforma moderna de vendas online com foco em guitarras. Design responsivo e experiência de usuário otimizada.</div>
+    <div class="project-tags">
+      <span class="project-tag">HTML</span>
+      <span class="project-tag">CSS</span>
+      <span class="project-tag">JavaScript</span>
+      <span class="project-tag">Python</span>
+      <span class="project-tag">Mysql</span>
+      <span class="project-tag">E-commerce</span>
+    </div>
+    <a href="https://github.com/gio0000/ecommerce-guitarras" target="_blank" class="btn-code" aria-label="Código do projeto E-commerce de Guitarras">
+      Ver no GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="project-card website">
+    <div class="project-badge website">Website</div>
+    <div class="project-icon">🌾</div>
+    <div class="project-title">Plataforma de Agronomia</div>
+    <div class="project-description">Site especializado em serviços agrícolas com conteúdo técnico e ferramentas para profissionais do setor.</div>
+    <div class="project-tags">
+      <span class="project-tag">Web Development</span>
+      <span class="project-tag">Agricultural Tech</span>
+      <span class="project-tag">HTML</span>
+      <span class="project-tag">CSS</span>
+      <span class="project-tag">Python</span>
+      <span class="project-tag">MYsql</span>
+    </div>
+    <a href="https://github.com/gio0000/site-agroneg-cios" target="_blank" class="btn-code" aria-label="Código do projeto Plataforma de Agronomia">
+      Ver no GitHub
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="project-card maintenance">
+    <div class="project-badge maintenance">Manutenção</div>
+    <div class="project-icon">🖥️</div>
+    <div class="project-title">Manutenção de Computadores</div>
+    <div class="project-description">Suporte técnico e manutenção preventiva de hardware.</div>
+    <div class="project-tags">
+      <span class="project-tag">Hardware</span>
+      <span class="project-tag">Suporte Técnico</span>
+    </div>
+    <a href="https://www.linkedin.com/posts/giordana-stumm-13786133a_projeto-integrador-activity-7335079937172779008-zHq5" target="_blank" class="btn-code" aria-label="Ver projeto Manutenção de Computadores no LinkedIn">
+      Ver no LinkedIn
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="project-card simulator">
+    <div class="project-badge simulator">Simulador</div>
+    <div class="project-icon">🪐</div>
+    <div class="project-title">Simulador Criador de Planetas</div>
+    <div class="project-description">Simulação interativa para criação e análise de planetas.</div>
+    <div class="project-tags">
+      <span class="project-tag">Simulação</span>
+      <span class="project-tag">Astronomia</span>
+    </div>
+    <a href="https://gio0000.github.io/Planetario/" target="_blank" class="btn-code" aria-label="Ver projeto Simulador Criador de Planetas">
+      Ver Planetário
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="project-card help">
+    <div class="project-badge help">Próximo projeto</div>
+    <div class="project-icon">⭐</div>
+    <div class="project-title">Projeto em Desenvolvimento</div>
+    <div class="project-description">Novidades vem aí! fique ligado.</div>
+    <div class="project-tags">
+      <span class="project-tag">Em breve</span>
+    </div>
+    <a href="#" class="btn-code" aria-label="Projeto em desenvolvimento">
+      Em breve
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" aria-labelledby="services-title" style="max-width: 1200px; margin: 0 auto 6rem auto; padding: 0 1rem;">
+    <h2 id="services-title" class="section-title" style="color:#b966ff;">Serviços</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">
+      Soluções completas em tecnologia, desde criação de sites até desenvolvimento de sistemas complexos e manutenção técnica.
+    </p>
+
+    <div class="cards-grid" role="list" aria-label="Serviços oferecidos pela Giordana Dev">
+      <!-- Service 1 -->
+      <article class="card" role="listitem" aria-labelledby="service-title-1" aria-describedby="service-desc-1">
+       
+        <h3 id="service-title-1">Sites Personalizados</h3>
+        <p id="service-desc-1">Criação de sites modernos e responsivos para pequenas empresas e empreendedores que buscam presença online profissional.</p>
+        <ul style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; margin-top: 8px; color: #b966ff" aria-label="Destaques do serviço Sites Personalizados">
+          <li>Design responsivo e moderno</li>
+          <li>Integração com redes sociais</li>
+          <li>Formulários de contato</li>
+          <li>Performance otimizada</li>
+          <li>Banco de dados</li>
+        </ul>
+        <div style="font-weight: 700; color: #b966ff; margin-top: 0.7rem; display:flex; justify-content: space-between; align-items: center;">
+          <span aria-label="Preço a partir de R$ 800" style="font-size: 1rem;">A partir de R$ 2.500</span>
+          <a href="https://wa.me/5554999527071?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank" style="text-decoration:none;">
+  <button aria-label="Solicitar serviços de sites personalizados" type="button" style="background-color:#121217; border-radius: 5px; border: 1px solid #b966ff; color: white; cursor:pointer; font-family: 'Roboto Mono', monospace; font-weight: 600; padding: 0.25rem 0.8rem; display:flex; align-items: center; gap: 0.3rem;">
+    Solicitar
+  </button>
+</a>
+
+            <svg width="12" height="12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="color:#b966ff;">
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6l-6 6 6 6"></path>
+            </svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Service 2 - Most popular with glow effect -->
+      <article class="card" role="listitem" aria-labelledby="service-title-2" aria-describedby="service-desc-2" style="box-shadow: 0 0 26px 9px #bb7affcc; border-color: #bb7affcc;">
+        
+          <div class="icon" aria-hidden="true">&lt;/&gt;</div>
+        </header>
+        <h3 id="service-title-2" style="color:#cc97ff;">Desenvolvimento Full Stack</h3>
+        <p id="service-desc-2" style="color:#d0cbd1;">Sistemas web,sites ou landing pages completos e personalizados com tecnologias robustas para atender necessidades específicas do seu negócio.</p>
+        <ul style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; margin-top: 8px; color: #b966ff" aria-label="Destaques do serviço Desenvolvimento Full Stack">
+          <li>Frontend moderno (React, HTML, CSS)</li>
+          <li>Backend escalável (Python, Java)</li>
+          <li>Banco de dados (MySQL)</li>
+          <li>Deploy e manutenção</li>
+        </ul>
+        <div style="font-weight: 700; color: #b966ff; margin-top: 0.7rem; display:flex; justify-content: space-between; align-items: center;">
+          <span aria-label="Preço a partir de R$ 2.500" style="font-size: 1rem;">A partir de R$ 2.500</span>
+          <a href="https://wa.me/5554999527071?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank" style="text-decoration:none;">
+  <button aria-label="Solicitar serviços de sites personalizados" type="button" style="background-color:#121217; border-radius: 5px; border: 1px solid #b966ff; color: white; cursor:pointer; font-family: 'Roboto Mono', monospace; font-weight: 600; padding: 0.25rem 0.8rem; display:flex; align-items: center; gap: 0.3rem;">
+    Solicitar
+  </button>
+            <svg width="12" height="12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="color:#b966ff;">
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6l-6 6 6 6"></path>
+            </svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="card" role="listitem" aria-labelledby="service-title-3" aria-describedby="service-desc-3">
+       
+        <h3 id="service-title-3">Manutenção de Hardware</h3>
+        <p id="service-desc-3">Serviços completos de manutenção, upgrade e suporte técnico para computadores e equipamentos.</p>
+        <ul style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; margin-top: 8px; color: #b966ff" aria-label="Destaques do serviço Manutenção de Hardware">
+          <li>Formatação e instalação de SO</li>
+          <li>Upgrade de componentes</li>
+          <li>Limpeza e montagem de PCs</li>
+          <li>Diagnóstico de problemas</li>
+          <li>Backup e recuperação de dados</li>
+        </ul>
+        <div style="font-weight: 700; color: #b966ff; margin-top: 0.7rem; display:flex; justify-content: space-between; align-items: center;">
+          <span aria-label="Preço a partir de R$ 100" style="font-size: 1rem;">A partir de R$ 100</span>
+         <a href="https://wa.me/5554999527071?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank" style="text-decoration:none;">
+      <button aria-label="Solicitar serviços de sites personalizados" type="button" style="background-color:#121217; border-radius: 5px; border: 1px solid #b966ff; color: white; cursor:pointer; font-family: 'Roboto Mono', monospace; font-weight: 600; padding: 0.25rem 0.8rem; display:flex; align-items: center; gap: 0.3rem;">
+        Solicitar
+      </button>
+            <svg width="12" height="12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" viewBox="0 0 24 24" style="color:#b966ff;">
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6l-6 6 6 6"></path>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  
+
+</body>
+
+</html>
+
+
+
+  <!-- SEÇÃO DE CONTATO -->
+<section id="contato" aria-labelledby="contato-title" style="background: #0a090d; color: #b3aaaf; padding: 80px 20px; font-family: 'Courier New', monospace;">
+  <div class="container" style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
+    <!-- Informações de Contato -->
+    <div style="flex: 1 1 350px; background: #1c1a1f; border-radius: 16px; padding: 40px; box-shadow: 0 0 20px #8822ff88; border: 2px solid #8822ff;">
+      <h2 id="contato-title" style="color: #8822ff; font-size: 2rem; margin-bottom: 1rem;">Contato</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Fique à vontade para entrar em contato comigo através dos canais abaixo. Estou pronta para conversar sobre projetos, parcerias ou dúvidas. Vamos juntos criar coisas incríveis! </p>
+      <p><strong style="color: #8822ff;">📞 Telefone:</strong> <a href="tel:+554999527071" style="color: #b966ff; text-decoration: underline;">+55 54 99952-7071</a></p>
+      
+      <p style="display: flex; align-items: center; gap: 8px; color: #b966ff; font-weight: 600; margin-top: 1rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#8822ff" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        <span><strong style="color: #8822ff;">📍 Localização:</strong> Carazinho,RS ,Brasil</span>
+      </p>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <form action="https://formspree.io/f/xrbaogkn" method="POST" style="flex: 1 1 450px; background: #1c1a1f; border-radius: 16px; padding: 40px; box-shadow: 0 0 20px #8822ff88; border: 2px solid #8822ff; display: flex; flex-direction: column; gap: 20px;" aria-label="Formulário de contato">
+      <h2 style="color: #8822ff; font-size: 2rem; margin-bottom: 1rem;">Envie uma mensagem</h2>
+
+      <label for="nome" style="font-weight: 600; color: #b966ff;">Nome</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome" style="padding: 12px; border-radius: 8px; border: 1px solid #555; background: #0a090d; color: #b3aaaf; font-family: monospace; font-size: 1rem;">
+
+      <label for="email" style="font-weight: 600; color: #b966ff;">Email</label>
+      <input type="email" id="email" name="email" required placeholder="seu@email.com" style="padding: 12px; border-radius: 8px; border: 1px solid #555; background: #0a090d; color: #b3aaaf; font-family: monospace; font-size: 1rem;">
+
+      <label for="mensagem" style="font-weight: 600; color: #b966ff;">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..." style="padding: 12px; border-radius: 8px; border: 1px solid #555; background: #0a090d; color: #b3aaaf; font-family: monospace; font-size: 1rem; resize: vertical;"></textarea>
+
+      <button type="submit" style="background-color: #8822ff; border: none; color: white; padding: 14px 0; font-size: 1.1rem; font-weight: 700; border-radius: 12px; cursor: pointer; transition: background-color 0.3s ease;">
+        Enviar Mensagem
+      </button>
+    </form>
+
+    <!-- Redes Sociais -->
+    <div style="flex: 1 1 300px; background: #1c1a1f; border-radius: 16px; padding: 40px; box-shadow: 0 0 20px #8822ff88; border: 2px solid #8822ff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+      <h2 style="color: #8822ff; font-size: 2rem; margin-bottom: 1rem;">Redes Sociais</h2>
+      <p style="font-size: 1.1rem; text-align: center; margin-bottom: 1rem;">Vamos nos conectar! Siga-me nas redes sociais para acompanhar meus projetos e novidades.</p>
+      <div style="display: flex; gap: 25px;">
+
+        <a href="https://github.com/gio0000" target="_blank" rel="noopener" aria-label="GitHub" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>GitHub</title><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.1.823 2.22v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/giordana-stumm-13786133a" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288zM5.337 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+
+        <a href="https://wa.me/5554999527071" target="_blank" rel="noopener" aria-label="WhatsApp" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>WhatsApp</title><path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.373 0 0 5.373 0 12a11.94 11.94 0 0 0 3.48 8.52l-1.5 5.52 5.52-1.5A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12a11.94 11.94 0 0 0-3.48-8.52zm-8.52 17.04a8.52 8.52 0 0 1-4.56-1.26l-.33-.2-3.3.9.9-3.3-.21-.33a8.52 8.52 0 1 1 7.5 3.93zm4.5-6.3c-.24-.12-1.44-.72-1.68-.8-.24-.08-.42-.12-.6.12s-.69.8-.84.96c-.15.16-.3.18-.54.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.35-1.68-.15-.24 0-.36.12-.48.12-.12.24-.3.36-.45.12-.15.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.6-1.44-.82-1.98-.22-.52-.44-.45-.6-.46-.15-.01-.33-.01-.51-.01-.18 0-.48.06-.72.3s-.96.94-.96 2.28.98 2.64 1.12 2.82c.14.18 1.94 2.96 4.7 4.14.66.28 1.18.44 1.58.56.66.18 1.26.15 1.74.09.53-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.24-.16-.48-.28z"/></svg>
+        </a>
+
+        <a href="https://www.instagram.com/gio__tech" target="_blank" rel="noopener" aria-label="Instagram" style="color: #8822ff; font-size: 2.8rem; transition: color 0.3s;">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="36" height="36"><title>Instagram</title><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4.25 1.5a5.75 5.75 0 1 1 0 11.5 5.75 5.75 0 0 1 0-11.5zm0 1.5a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5z"/></svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <footer>
+        <div class="footer">
+            <h3>Obrigado pela visita</h3>
+            <div class="linha-neon"></div>
+            <p>Explore nossos serviços profissionais de desenvolvimento e fique conectado para novidades.</p>
+            <p>&copy; 2025 Todos os direitos reservados.</p>
+            <div class="assinatura">
+                Giordana Vitória Stumm Dev Full Stack
+            </div>
+        </div>
+    </footer>
+  <!-- JavaScript - para scroll suave -->
+      <script>
+      
+<!-- Script de responsividade -->
+
+function aplicarResponsividade() {
+  const largura = window.innerWidth;
+  const body = document.body;
+
+  body.classList.remove("mobile", "tablet", "desktop");
+
+  if (largura <= 768) {
+    body.classList.add("mobile");   // Celulares
+  } else if (largura <= 1024) {
+    body.classList.add("tablet");   // Tablets
+  } else {
+    body.classList.add("desktop");  // PCs
+  }
+}
+
+window.addEventListener("load", aplicarResponsividade);
+window.addEventListener("resize", aplicarResponsividade);
+</script>
+
+<!-- CSS de responsividade -->
+<style>
+/* Mobile */
+body.mobile h1 { font-size: 22px; text-align: center; }
+body.mobile .container { padding: 15px; }
+
+/* Tablet */
+body.tablet h1 { font-size: 28px; text-align: center; }
+body.tablet .container { padding: 25px; }
+
+/* Desktop */
+body.desktop h1 { font-size: 36px; text-align: left; }
+body.desktop .container { max-width: 1200px; margin: auto; }
+</style>
+
+
+</script>
+</body>
+</html>
